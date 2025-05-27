@@ -19,16 +19,18 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        working-directory: ./client
-        run: npm install
+        run: cd client && npm install
 
       - name: Build React app
-        working-directory: ./client
-        run: npm run build
+        run: cd client && npm run build
 
       - name: Deploy to GitHub Pages
-        working-directory: ./client
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./client/build
+          publish_branch: gh-pages
+          user_name: vaishnaviraghavendra
+          user_email: vaishnaviraghavendra33@gmail.com
+          force_orphan: true
+          verbose: true
