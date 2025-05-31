@@ -1,0 +1,43 @@
+{
+  "members": [
+    {
+      "id": "1",
+      "difficulty": "Easy",
+      "title": "Write a function that returns sum of 2 numbers",
+      "testCases": [
+        { "input": { "a": 2, "b": 3 }, "output": 5 },
+        { "input": { "a": -2, "b": 3 }, "output": 1 },
+        { "input": { "a": 450, "b": -300 }, "output": 150 },
+        { "input": { "a": 2.51, "b": 3.49 }, "output": 6 },
+        { "input": { "a": 72, "b": 36 }, "output": 108 }
+      ]
+    },
+    {
+      "id": "2",
+      "difficulty": "Easy",
+      "title": "Write a function that returns the greatest of 2 numbers",
+      "testCases": [
+        { "input": { "a": 2, "b": 3 }, "output": 3 },
+        { "input": { "a": 2, "b": 30 }, "output": 30 },
+        { "input": { "a": 200, "b": 500 }, "output": 500 },
+        { "input": { "a": 2, "b": 1 }, "output": 2 },
+        { "input": { "a": -9, "b": -300 }, "output": -9 }
+      ]
+    },
+    {
+      "id": "3",
+      "difficulty": "Medium",
+      "title": "Write a function that return the highest value in an array",
+      "testCases": [
+        { "input": { "list": [1, 2, 3, 4, 5, 6] }, "output": 6 },
+        { "input": { "list": [12, 45, 89, 90] }, "output": 90 },
+        { "input": { "list": [789, 125, 675, 390, 64, 456] }, "output": 789 },
+        { "input": { "list": [-90, -54, -9, -34, -31] }, "output": -9 },
+        {
+          "input": { "list": [1.35, 1.78, 1.45, 0.9, 2.2, 2.78] },
+          "output": 2.78
+        }
+      ]
+    }
+  ]
+}
