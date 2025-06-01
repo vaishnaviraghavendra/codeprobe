@@ -11,11 +11,11 @@ After installing Node.js, you can open a terminal or command prompt and run: `no
 This command shows the installed Node.js version, confirming that it’s installed correctly.
 
 ## install and start backend
-cd client
-npm i
-npm start
+`cd client`
+`npm i`
+`npm start`
 
 ## install and start frontend
-cd server
-npm i
-npm start
+`cd server`
+`npm i`
+`npm start`
