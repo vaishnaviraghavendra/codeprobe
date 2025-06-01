@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/codeprobe/static/css/main.51a36bc4.css",
+    "main.js": "/codeprobe/static/js/main.ab30bc45.js",
+    "static/js/453.419a5d54.chunk.js": "/codeprobe/static/js/453.419a5d54.chunk.js",
+    "index.html": "/codeprobe/index.html",
+    "main.51a36bc4.css.map": "/codeprobe/static/css/main.51a36bc4.css.map",
+    "main.ab30bc45.js.map": "/codeprobe/static/js/main.ab30bc45.js.map",
+    "453.419a5d54.chunk.js.map": "/codeprobe/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51a36bc4.css",
+    "static/js/main.ab30bc45.js"
+  ]
+}
