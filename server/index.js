@@ -50,12 +50,6 @@ app.post("/assess", (req, res) => {
   }
 });
 
-// Route to get all problems
-app.get("/problems", (req, res) => {
-  const questionList = getQuestions();
-  res.status(200).send(questionList);
-});
-
 // Start server on port 3005
 const PORT = process.env.PORT || 3005;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
