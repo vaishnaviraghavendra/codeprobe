@@ -1,23 +1,38 @@
 const express = require("express");
 const getQuestions = require("./getAllQuestions");
 const readExpectations = require("./readInputs");
+const path = require("path");
 
 const app = express();
 
-// Built-in body parsing middleware
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Enable CORS
+// CORS
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
-  res.setHeader("Access-Control-Allow-Headers", "X-Requested-With,content-type");
-  res.setHeader("Access-Control-Allow-Credentials", true);
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-Requested-With,content-type"
+  );
   next();
 });
 
-// Route to assess code
+// Serve frontend build
+app.use(express.static(path.join(__dirname, "../client/build")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
+
+// API Routes
+app.get("/problems", (req, res) => {
+  const questionList = getQuestions();
+  res.status(200).send(questionList);
+});
+
 app.post("/assess", (req, res) => {
   const code = req.body.code;
   const problemID = req.body.probID;
@@ -42,5 +57,5 @@ app.get("/problems", (req, res) => {
 });
 
 // Start server on port 3005
-app.listen(3005, () => console.log("Server running on port 3005"));
-app.listen(3004, () => console.log("Server running on port 3004"));
+const PORT = process.env.PORT || 3005;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

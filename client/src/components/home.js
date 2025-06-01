@@ -14,7 +14,7 @@ function SimpleButton() {
       setShowQuestions(false);
     } else {
       axios
-        .get("http://localhost:3004/problems")
+        .get("http://localhost:3005/problems")
         .then((response) => {
           setList(response.data);
           setShowQuestions(true);

@@ -10,7 +10,7 @@ function AreaOfRect() {
 
   const submitCode = (event) => {
     axios
-      .post("http://localhost:3004/assess", {
+      .post("http://localhost:3005/assess", {
         code: editorContent,
         inputFilepath: "./inputsFolder/AreaOfRect.txt",
       })

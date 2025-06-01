@@ -9,7 +9,7 @@ function Greatest() {
 
   const submitCode = (event) => {
     axios
-      .post("http://localhost:3004/assess", {
+      .post("http://localhost:3005/assess", {
         code: editorContent,
         probID: "2",
       })

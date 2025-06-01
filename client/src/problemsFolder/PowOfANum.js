@@ -9,7 +9,7 @@ function PowOfANum() {
   const [response, setResponse] = useState();
 
   const submitCode = (event) => {
-    axios.post('http://localhost:3004/assess', {
+    axios.post('http://localhost:3005/assess', {
       code: editorContent,
       inputFilepath : './inputsFolder/PowerOfaNumber.txt'
     })
