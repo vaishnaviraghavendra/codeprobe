@@ -7,7 +7,7 @@ this repository contains express based nodejs backend code in server folder and 
 
 ## nodejs
 Install nodejs using-> https://nodejs.org/en
-After installing Node.js, you can open a terminal or command prompt and run: node -v
+After installing Node.js, you can open a terminal or command prompt and run: `node -v`
 This command shows the installed Node.js version, confirming that it’s installed correctly.
 
 ## install and start backend
